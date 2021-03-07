@@ -1,0 +1,8 @@
+@import "../generic/reset";
+@import "../settings/variables";
+
+@import "../elements/header";
+
+.container {
+  @include container
+}
