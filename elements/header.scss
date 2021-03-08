@@ -5,31 +5,38 @@ header {
   position: relative;
 }
 .banner {
-    @include center;
-    justify-content: space-between;
-    height: 70px;
-    p {
+  @include center;
+  justify-content: space-between;
+  height: 70px;
+  p {
+    display: inline-block;
+    font: $font-raleway;
+    color: $color-primary;
+    margin-left: 100px;
+  }
+  nav {
+    display: inline-block;
+    z-index: 1;
+
+    ul {
+      font: $font-open-sans;
+      color: $color-grey;
+
+      li {
         display: inline-block;
-        font: $font-raleway;
-        color: $color-primary;
-        margin-left: 100px;
-    }
-    nav {
-      display: inline-block;
-
-      ul {
-        font: $font-open-sans;
-        color: $color-grey;
-
-        li {
-          display: inline-block;
-          padding: 0 40px;
-        }
-        li:nth-of-type(4) {
-          margin-right: 100px;
-        }
+        padding: 0 40px;
+        text-transform: uppercase;
+      }
+      li:hover {
+        color: $color-black;
+        border-bottom: 3px solid $color-primary;
+        line-height: 70px;
+      }
+      li:nth-of-type(4) {
+        margin-right: 100px;
       }
     }
+  }
   @include mobile {
     p {
       margin-left: 0;
@@ -40,14 +47,14 @@ header {
     }
     div{
       margin-right: 30px;
-    span {
-      width: 20px;
-      height: 2px;
-      display: block;
-      margin-bottom: 3px;
-      background-color: $color-primary;
-      transition: .3s all ease-in-out;
-    }
+      span {
+        width: 20px;
+        height: 2px;
+        display: block;
+        margin-bottom: 3px;
+        background-color: $color-primary;
+        transition: .3s all ease-in-out;
+      }
     }
   }
 }

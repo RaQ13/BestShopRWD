@@ -379,6 +379,7 @@ header {
 }
 .banner nav {
   display: inline-block;
+  z-index: 1;
 }
 .banner nav ul {
   font: normal normal bold 15px/15px Open Sans;
@@ -387,11 +388,17 @@ header {
 .banner nav ul li {
   display: inline-block;
   padding: 0 40px;
+  text-transform: uppercase;
+}
+.banner nav ul li:hover {
+  color: #000000;
+  border-bottom: 3px solid #08A6E4;
+  line-height: 70px;
 }
 .banner nav ul li:nth-of-type(4) {
   margin-right: 100px;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .banner {
     width: 100%;
   }
